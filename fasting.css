@@ -1,0 +1,225 @@
+ /* Set some global styles for the body element */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set some styles for the timer display elements */
+#timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  padding: 20px;
+}
+
+#timer span {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+#timer span:not(:last-child)::after {
+  content: ":";
+}
+
+/* Set some styles for the start and end buttons */
+#start-btn,
+#end-btn {
+  display: block;
+  width: 100%; /* Make the buttons smaller */
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 20px;
+}
+
+#end-btn {
+  background-color: #f44336;
+}
+
+/* Add some hover effects to the buttons */
+#start-btn:hover,
+#end-btn:hover {
+  opacity: 0.8;
+}
+
+/* Set some styles for the message element */
+#message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Set some styles for the BMI button */
+#bmi-btn {
+  display: block;
+  width: 100%; /* Make the button smaller */
+  padding: 10px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 20px;
+}
+
+/* Add some hover effects to the BMI button */
+#bmi-btn:hover {
+
+  opacity: 0.8;
+}
+
+/* Set some styles for the message element */
+#message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Set some styles for the BMI button */
+#bmi-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 20px;
+}
+
+/* Add some hover effects to the BMI button */
+#bmi-btn:hover {
+opacity:0.8
+}
+
+/* Set some styles for the BMI modal window */
+#bmi-modal {
+display:none; /* Hide by default */
+position:fixed; /* Stay in place */
+z-index:1; /* Sit on top */
+left:0; 
+top:0; 
+width:100%; /* Full width */
+height:100%; /* Full height */
+overflow:auto; /* Enable scroll if needed */
+background-color:#000; /* Fallback color */
+background-color:#00000080; /* Black with opacity */
+}
+
+/* Set some styles for the modal content */
+#bmi-modal .modal-content {
+background-color:#fefefe; 
+margin:auto; 
+padding:20px; 
+border:none; 
+width:max-content; 
+max-width:90%; /* Responsive width */
+}
+
+/* Set some styles for the close button */
+.close {
+color:#aaa; 
+float:right; 
+font-size:28px; 
+font-weight:bold; 
+}
+
+.close:hover,
+.close:focus {
+color:black; 
+text-decoration:none; 
+cursor:pointer; 
+}
+
+/* Set some styles for the BMI form elements */
+#bmi-form input,
+#bmi-form select,
+#bmi-form button {
+display:block; 
+width:max-content; 
+max-width:90%; /* Responsive width */
+padding:10px; 
+margin-bottom:10px; 
+border:none; 
+font-size:16px; 
+}
+
+#bmi-form button {
+background-color:#4caf50; 
+color:white; 
+}
+
+/* Add some hover effects to the calculate button */
+#bmi-form button:hover {
+opacity:0.8;
+}
+
+/* Set some styles for the BMI result element */
+#bmi-result {
+text-align:center; 
+font-weight:bold; 
+}
+
+/* Set some styles for the history table elements */
+#history-table,
+#bmi-history-table {
+border-collapse:collapse; 
+width:100%; 
+margin-top:10px; 
+}
+
+#history-table th,
+#history-table td,
+#bmi-history-table th,
+#bmi-history-table td {
+border:1px solid #ddd; 
+padding:8px; 
+}
+
+#history-table tr:nth-child(even),
+#bmi-history-table tr:nth-child(even) {
+background-color:#f2f2f2; 
+}
+
+#history-table tr:hover,
+#bmi-history-table tr:hover {
+background-color:#ddd; 
+}
+
+/* Set some styles for the progress bar element */
+#bmi-progress-bar {
+display:block; 
+width:100%; 
+height:20px; 
+margin-top:10px; 
+}
+
+/* Set some styles for the progress span element */
+#bmi-progress-span {
+display:block; 
+text-align:center; 
+font-weight:bold; 
+}
+
+/* Use media queries to make the app responsive for mobile screens */
+@media screen and (max-width: 600px) {
+  #timer span {
+    font-size: 36px;
+  }
+
+  #start-btn,
+  #end-btn,
+  #bmi-btn {
+    font-size: 16px;
+  }
+
+  #bmi-modal .modal-content {
+    width: 80%;
+  }
+
+  #bmi-form input,
+  #bmi-form select,
+  #bmi-form button {
+    width: 100%;
+  }
+}
